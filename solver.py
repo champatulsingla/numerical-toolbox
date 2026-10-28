@@ -37,3 +37,5 @@ def matrix_vector_product(A, x):
     return v
 
 print("Matrix-vector product of A and y:", matrix_vector_product(np.array([[1, 2], [3, 4]]), y[:2]) )
+
+# check by an example
