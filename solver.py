@@ -61,3 +61,6 @@ A = np.array([[2, 1], [1, 2]])
 x = np.array([1, 1])
 rq = rayleigh_quotient(A, x)
 print("Rayleigh quotient of A and x:", rq)
+# also check with numpy's built-in function
+rq_np = (x.T @ (A @ x)) / (x.T @ x)
+print("Rayleigh quotient using numpy:", rq_np)
