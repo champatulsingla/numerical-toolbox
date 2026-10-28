@@ -56,3 +56,4 @@ def rayleigh_quotient(A, x):
     if denominator == 0:
         raise ValueError("Denominator in Rayleigh quotient is zero, cannot compute.")       
     return (x.T @ Ax) / denominator
+# check by an example
