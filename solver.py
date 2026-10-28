@@ -48,4 +48,6 @@ result_np = A @ x
 print("Matrix-vector product using numpy:", result_np)
 if np.allclose(result, result_np):
     print("Both matrix-vector products are equal.")
-    
+
+
+#
