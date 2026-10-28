@@ -57,3 +57,7 @@ def rayleigh_quotient(A, x):
         raise ValueError("Denominator in Rayleigh quotient is zero, cannot compute.")       
     return (x.T @ Ax) / denominator
 # check by an example
+A = np.array([[2, 1], [1, 2]])
+x = np.array([1, 1])
+rq = rayleigh_quotient(A, x)
+print("Rayleigh quotient of A and x:", rq)
