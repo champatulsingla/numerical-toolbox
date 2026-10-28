@@ -48,4 +48,11 @@ result_np = A @ x
 print("Matrix-vector product using numpy:", result_np)
 if np.allclose(result, result_np):
     print("Both matrix-vector products are equal.")
-    
+
+# check the Rayleigh quotient function
+def rayleigh_quotient(A, x):
+    Ax = matrix_vector_product(A, x)
+    denominator = x.T @ x
+    if denominator == 0:
+        raise ValueError("Denominator in Rayleigh quotient is zero, cannot compute.")       
+    return (x.T @ Ax) / denominator
