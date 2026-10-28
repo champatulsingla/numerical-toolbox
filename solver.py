@@ -20,3 +20,9 @@ if np.isclose(n, n_np):
 else:
     print("Norms are not equal.")
 
+# check by an example 
+norm_function = norm(y)
+numpy_norm = np.linalg.norm(y)
+if np.isclose(norm_function, numpy_norm):
+    print("The custom norm function and numpy's norm function give the same result.")
+
