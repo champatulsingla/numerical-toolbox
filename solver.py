@@ -26,3 +26,13 @@ numpy_norm = np.linalg.norm(y)
 if np.isclose(norm_function, numpy_norm):
     print("The custom norm function and numpy's norm function give the same result.")
 
+# matrix-vector product
+def matrix_vector_product(A, x):
+    if len(x) != A.shape[1]:
+        raise ValueError("Dimension mismatch: The length of vector x must match the number of columns in matrix A.")
+    v = np.zeros(A.shape[0])
+    for i in range(A.shape[0]):
+        for j in range(A.shape[1]):
+            v[i] += A[i, j] * x[j]
+    return v
+
