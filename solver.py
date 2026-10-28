@@ -39,3 +39,13 @@ def matrix_vector_product(A, x):
 print("Matrix-vector product of A and y:", matrix_vector_product(np.array([[1, 2], [3, 4]]), y[:2]) )
 
 # check by an example
+A = np.array([[1, 2], [3, 4]])
+x = np.array([5, 6])
+result = matrix_vector_product(A, x)
+print("Matrix-vector product of A and x:", result)
+# also check with numpy's built-in function
+result_np = A @ x
+print("Matrix-vector product using numpy:", result_np)
+if np.allclose(result, result_np):
+    print("Both matrix-vector products are equal.")
+    
